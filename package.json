@@ -1,0 +1,25 @@
+{
+  "name": "@jparkinson1991/webpack-sourcemaps-debug",
+  "version": "1.0.0",
+  "description": "Debugging webpack sourcemaps",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./public/css && rm -rf ./public/fonts",
+    "build:node-sass": "npm run clean && node-sass src/scss/style.scss public/css/style.css --source-map true --importer node_modules/node-sass-tilde-importer",
+    "build:webpack": "npm run clean && webpack"
+  },
+  "author": "Josh Parkinson <joshparkinson1991@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap-sass": "^3.4.1",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "gulp": "^4.0.2",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "node-sass-tilde-importer": "^1.0.2",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
+}
