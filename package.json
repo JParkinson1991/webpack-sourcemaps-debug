@@ -1,6 +1,6 @@
 {
   "name": "@jparkinson1991/webpack-sourcemaps-debug",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Debugging webpack sourcemaps",
   "main": "index.js",
   "scripts": {
