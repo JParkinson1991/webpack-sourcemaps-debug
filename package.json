@@ -15,7 +15,6 @@
     "bootstrap-sass": "^3.4.1",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
-    "gulp": "^4.0.2",
     "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "^4.13.1",
     "node-sass-tilde-importer": "^1.0.2",
