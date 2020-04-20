@@ -2,27 +2,40 @@
 
 A simple repository to show errors in sourcemap generation by webpack.
 
-## Requirements
+## Updates
 
-- [node.js](https://nodejs.org/en/)
-- Local web server
+- Bug has been narrowed to down to `node-sass` `css-loader` bindings
+- Sourcemaps generated as expected when
+  - Using `node-sass` standalone _[Scenario 1]_
+  - Using `sass/css-loader` with `dart-sass` via webpack _[Scenario 2]_
+- Sourcemaps point to wrong files when
+  - Using `sass/css-loader` with `node-sass` via webpack _[Scenario 3]_
 
-## Installing
+## Installation & Usage
 
+### Installing
+
+- Install [node.js](https://nodejs.org/en/)
+- Spin up local web server
 - Clone the repository
 - `cd [repository root] && npm install`
 
+### Usage
 
-## Usage
-
-Open the index.html fild under `./public`
+Open the index.html file under `./public`
 
 #### Commands
 
 ```
-# Compiles source/generates sourcemaps via webpack
-$ npm run build:webpack 
-
+# [Scenario 1] - Passing
 # Compiles source/generates sourcemaps via node-sass only
-$ npm run build:node-sass
+$ build:node-sass
+
+# [Scenario 2] - Passing
+# Compiles source/generates sourcemaps with dart sass via webpack
+$ npm run build:webpack:dart
+
+# [Scenario 3] - Failing
+# Compiles source/generates sourcemaps with node sass via webpack
+$ npm run build:webpack:node
 ```
